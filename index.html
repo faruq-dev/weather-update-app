@@ -20,11 +20,12 @@
       class="max-w-full h-full md:h-screen bg-no-repeat bg-cover bg-center"
       style="background-image: url(/assets/backgrounds/honza-reznik-tUsIUWNEtsQ-unsplash.jpg)"
     >
-    <!-- Top bar includes logo & search box -->
+      <!-- Top bar includes logo & search box -->
       <div class="bg-black-to-transparent px-4 md:px-6 lg:px-24 2xl:px-0">
         <div
           class="max-w-[1320px] mx-auto py-6 flex flex-col md:flex-row gap-8 md:gap-0 justify-between md:items-center"
         >
+          <!-- Logo Part -->
           <div class="flex items-center gap-3">
             <div class="max-w-[70px]">
               <img class="w-full" src="/assets/backgrounds/weather.png" alt="" />
@@ -35,16 +36,15 @@
             </p>
           </div>
           
-          <div class="font-serif relative max-w-full">
+          <!-- Input Area -->
+          <form id="form-data" class="font-serif relative max-w-full">
             <input
               class="rounded-md py-[12px] px-[15px] bg-black bg-opacity-30 placeholder-white outline-none text-white w-[100%] md:w-auto"
-              type="text"
-              placeholder="Search Location"
+              type="search"
+              placeholder="Search Location" name="search-input"
             />
-            <i
-              class="fa-solid fa-magnifying-glass text-white absolute top-[35%] right-[15px]"
-            ></i>
-          </div>
+            <button class="absolute top-[27%] right-[15px]" type="submit"><img src="./public/assets/search.svg" alt=""></button>
+          </form>
         </div>
       </div>
 
@@ -83,4 +83,5 @@
 
     </div>
   </body>
+  <script type="module" src="./script.js"></script>
 </html>
